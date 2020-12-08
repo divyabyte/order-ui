@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/css/uikit.min.css" />    
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="uk-navbar uk-box-shadow-small" uk-navbar >
+        <div class="uk-navbar-nav uk-margin-small-left uk-margin-small-top">
+            <p class="nav-title">HARRY'S</p>
+        </div>
+    </nav>
+
+
+    <!-- order -->
+    <section class="order">
+        <div class="row">
+            <div class="col-lg-6 uk-text-right">
+                <img src="image/order.png" >
+            </div>
+            <div class="col-lg-4">
+
+                <div class="uk-card uk-card-default uk-card-body uk-text-left">
+                    <p class="title">Your trial ships today</p>
+                    <ul>
+                        <li><s>$13</s>Free Trial Set</li>
+                        <li>$3 Shipping</li>
+                    </ul>
+                    <p class="heading">Includes razor, shave gel and a blade cover</p>
+                </div>
+                <div class="uk-card line uk-card-default uk-card-body">
+                    <div class="uk-flex">
+                        <p class="color">HANDLE COLOR</p>
+                        <img class="uk-margin-medium-left" src="image/orange.png">
+                        <img src="image/blue.png">
+                        <img  src="image/green.png">
+                    </div>
+                
+                    <button class="uk-button button uk-width-1-1">Reivew Order</button>
+                </div>   
+                <div class="uk-card uk-card-default uk-card-body uk-margin-top">
+                    <p class="title">Your first ship refill ships Feb 3</p>
+                    <ul>
+                        <li>Cancel or Modify anytime</li>
+                        <li>Free shipping</li>
+                    </ul>
+                </div>
+                <div class="uk-card line uk-card-default uk-card-body">
+                    <div class="uk-flex">
+                        <p class="color uk-margin-medium-left">DELIVER EVERY</p>
+                        <p class="mon uk-margin-left uk-margin-right">3 months <i class="fa fa-chevron-down" aria-hidden="true"></i> </p>
+                        <p class="color"><u>Not Sure?</u></p>
+                    </div>
+                
+                </div>
+                <div class="uk-card line uk-card-default uk-card-body">
+                    
+                        <label class="container">
+                            <div uk-grid>
+                            <img src="image/1.png">
+                            <p class="color uk-margin-small-top">8 Blade, 1 Gel - $21</p>
+                            </div>
+                            <input type="radio" checked="checked" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+                    
+                      <label class="container"><div uk-grid>
+                        <img src="image/2.png">
+                        <p class="color uk-margin-small-top">8 Blade, 1 Gel - $21</p>
+                        </div>
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                      </label>
+                </div>
+
+            </div>
+        </div>
+    </section>
+  
+    <!-- trial -->
+    <section class="trial">
+        <div class="uk-grid uk-flex uk-flex-center">
+            <h3>How the trial works</h3>
+        </div>
+        <div class="uk-grid uk-flex uk-flex-center">
+            <div class="uk-margin-large-right uk-margin-medium-top uk-text-center ">
+                <img src="image/trial1.png">
+                <p>Try for 2 weeks</p>
+                <p>Get Started with a razor &<br>
+                    shave gel for just $3 shipping
+                </p>
+            </div>
+            <div class="uk-margin-large-right uk-margin-medium-top uk-text-center ">
+                <img src="image/trial3.png">
+                <p>Build your plan</p>
+                <p>Choose your refill frequency<br>
+                    $2 per blade, with free<br>
+                    shipping.
+                </p>
+            </div>
+            <div class="uk-margin-large-right uk-margin-medium-top  uk-text-center ">
+                <img src="image/trial3.png">
+                <p>Cancel anytime</p>
+                <p>Cancel or change your plan<br>
+                    anytime. No stockpilling.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var check = $("#radio1");
+        $("#radio1").on('razor',checkStatus);
+
+        function checkStatus(){
+            if(check.is(':checked'))
+            {
+                $("#radio2").prop('disabled',true);
+            }
+            else{
+                $("#radio2").prop('disabled',false);
+            }
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.10/dist/js/uikit-icons.min.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+</body>
+</html>
